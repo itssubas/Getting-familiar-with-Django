@@ -1,0 +1,16 @@
+{% extends "personal/header.html" %}
+{% block content %}
+<h3><a href="/blog/{{post.id}}">{{ post.title }}</a></h3>
+<h6><i> On {{ post.date }}</i></h6>
+<h6><i> By {{ post.author }}</i></h6>
+
+
+<div class = "text-justify">
+	<div class = "col-lg-10">
+		
+			{{ post.body|safe|linebreaks}}
+		
+	</div>
+</div>
+<br><br>
+{% endblock %}
